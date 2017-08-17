@@ -1,0 +1,60 @@
+<section style="height:auto; width: 700px; margin-left: 300px;"  ng-controller="empController" >
+    <h1 style="text-align: center">Employee Details</h1><br><br><br><br>
+
+
+
+
+
+
+
+    <table class="table" >
+        <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Employee Birthdate</th>
+            <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in myData">
+            <td>{{x.id}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.BirthDate}}</td>
+            <td>{{x.Age}}</td>
+            <td> <button class="btn btn-primary btn-sx" type="button" ng-click="removeEmp($index)">Remove</button></td>
+            <td> <button class="btn btn-primary btn-sx" type="button" ng-click="editEmp(x)">Edit</button> </td>
+        </tr>
+
+
+
+        </tbody>
+    </table>
+
+    <br><br><br>
+
+
+
+
+
+    <div class="text-center">
+
+        <button class="btn btn-primary btn-sx" type="button" ng-click="addEmp()">Add Employee</button> &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+<br><br><br>
+
+        <div ng-show="showForm">
+
+
+
+</div>
+
+
+    </div>
+
+
+
+
+</section>
